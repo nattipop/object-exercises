@@ -22,5 +22,16 @@ Starter Code:
 */
 
 function convertObjectToList(obj) {
-  // your code here
-}
+  var converted = [];
+
+  for(prop in obj){
+    var array = [];
+    var value = obj[prop];
+
+    array.push(prop);
+    array.push(value);
+    converted.push(array);
+  };
+
+  return converted;
+};

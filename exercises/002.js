@@ -26,5 +26,19 @@ function getAllKeys(obj) {
 */
 
 function getAllKeys(obj){
-  // your code here
-}
+  var error = 'Error: please enter an object'
+
+  var keys = [];
+
+  if(typeof obj !== 'object'){
+    throw error
+  } else {
+    for(prop in obj){
+      if(obj.hasOwnProperty(prop)){
+        keys.push(prop);
+      }
+    }
+  }
+  
+  return keys;
+};

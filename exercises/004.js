@@ -28,6 +28,13 @@ Starter Code
 */
 
 function listAllValues(obj) {
-  // your code here
+  var list = [];
 
-}
+  for(key in obj){
+    if(obj.hasOwnProperty(key)){
+      list.push(obj[key]);
+    }
+  }
+
+  return list;
+};
